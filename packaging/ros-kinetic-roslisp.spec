@@ -10,9 +10,11 @@ Source1001:     %{name}.manifest
 BuildRequires:  ros-kinetic-catkin
 Requires:       ros-kinetic-roslang
 Requires:       ros-kinetic-rospack
-Requires:       sbcl
 Requires:       ros-kinetic-rosgraph-msgs
 Requires:       ros-kinetic-std-srvs
+
+# Workaround to resolve the circular dependency in sbcl package
+# Requires:       sbcl
 
 %description
 Lisp client library for ROS, the Robot Operating System
